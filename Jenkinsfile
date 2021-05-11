@@ -89,3 +89,5 @@ finally {
     currentBuild.result = 'SUCCESS'
   }
 }
+
+// Updated sh to BAT
