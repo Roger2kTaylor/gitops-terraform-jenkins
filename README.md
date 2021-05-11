@@ -4,7 +4,7 @@
 
 This repository will demonstrate an example GitOps workflow with Terraform and Jenkins.
 
-The configuration in this repository was updated and now supports `Terraform v0.12.19`.
+The configuration in this repository was updated and now supports `Terraform v0.15.3`.
 
 Video can be found here:
 
@@ -20,14 +20,14 @@ https://youtu.be/qFjGqPw1NUY
 
 ## Setup Bucket
 
-You will need to create a bucket and reference the bucket name in the following section of `main.tf`:
+You will need to create a bucket and reference the bucket name in the following section of `terraform.tf`:
 
 ```
 terraform {
   backend "s3" {
-    bucket = "terraform-bucket-alex"
+    bucket = "tf-jenkins-backen"
     key    = "terraform.tfstate"
-    region = "us-east-1"
+    region = "us-east-2"
   }
 }
 ```
